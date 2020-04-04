@@ -1,0 +1,11 @@
+.an-container {
+    @extend %padding-site-xxl;
+    @extend %margin-0-auto;
+
+    max-width: gutter(160);
+    width: 100%;
+
+    &--center {
+        text-align: center;
+    }
+}

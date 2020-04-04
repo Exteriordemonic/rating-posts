@@ -1,0 +1,32 @@
+.an-tabs {
+    @extend %radius;
+    @extend %padding-s;
+    @extend %padding-site-m;
+    @extend %margin-0-auto;
+
+    background-color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    &__link {
+        @extend %radius;
+        @extend %padding-s;
+        @extend %padding-site-m;
+        @extend %margin-all-s;
+        @extend %text-menu;
+
+        display: block;
+        background-color: $gray;
+        transition: $transition;
+
+        &:hover {
+            background-color: $dark-gray;
+        }
+
+        &.-is-active {
+            background-color: $special;
+            font-weight: $bold;
+        }
+    }
+}

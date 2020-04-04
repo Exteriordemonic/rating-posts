@@ -1,0 +1,10 @@
+.anbieters {
+    background-color: $gray;
+
+    &__title {
+        @extend %padding;
+        @extend %margin-0;
+        @extend %title;
+        text-align: center;
+    }
+}
