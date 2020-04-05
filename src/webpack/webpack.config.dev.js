@@ -15,12 +15,11 @@ module.exports = merge(common, {
   },
   plugins: [
     new Webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('development')
+      'process.env.NODE_ENV': JSON.stringify('development'),
     })
   ],
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.js$/,
         include: Path.resolve(__dirname, '../src'),
         enforce: 'pre',

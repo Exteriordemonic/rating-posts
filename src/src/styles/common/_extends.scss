@@ -1,5 +1,6 @@
 // Sizes
 
+$xs: gutter(0.5);
 $s: gutter(1);
 $m: gutter(2);
 $l: gutter(3);
@@ -60,8 +61,11 @@ $xxl: gutter(5);
 
 %radius {
   border-radius: gutter(1);
-}
 
+  &-s {
+    border-radius: gutter(0.5);
+  }
+}
 
 // Margins
 
@@ -98,6 +102,10 @@ $xxl: gutter(5);
   }
 
   &-all {
+    &-xs {
+      margin: $xs;
+    }
+
     &-s {
       margin: $s;
     }
@@ -168,6 +176,11 @@ $xxl: gutter(5);
     padding-bottom: $l;
   }
 
+  &-m {
+    padding-top: $m;
+    padding-bottom: $m;
+  }
+
   &-xl {
     padding-top: $xl;
     padding-bottom: $xl;
@@ -179,6 +192,10 @@ $xxl: gutter(5);
   }
 
   &-all {
+    &-xs {
+      padding: $xs;
+    }
+
     &-s {
       padding: $s;
     }

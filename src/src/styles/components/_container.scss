@@ -2,8 +2,13 @@
     @extend %padding-site-xxl;
     @extend %margin-0-auto;
 
-    max-width: gutter(160);
+    max-width: gutter(180);
     width: 100%;
+
+    @include mediaTo(sm) {
+        padding-left: $l;
+        padding-right: $l;
+    }
 
     &--center {
         text-align: center;

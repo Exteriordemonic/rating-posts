@@ -7,6 +7,12 @@
     grid-template-columns: repeat(3, 1fr);
     gap: $l;
     margin-left: 0;
+    padding-bottom: $xxl;
+    transition: $transition;
+
+    &.-is-active {
+        opacity: 0;
+    }
 
     @include mediaTo(sm) {
         grid-template-columns: 1fr;
@@ -17,41 +23,100 @@
         @extend %padding-all-xxl;
 
         background-color: $light;
+
+        &--empty {
+            grid-column: span 3;
+
+            @include mediaTo(sm) {
+                grid-column: span 1;
+            }
+        }
     }
 
     &__image-wrapper {
+        @extend %radius;
         position: relative;
         // Ratio 6:9
         width: 100%;
         padding-top: 66.67%;
+        border: 1px solid $gray;
+        margin-bottom: $l;
 
         img {
             @extend %absolute;
             @extend %image;
 
             object-fit: contain;
-            border: 0;
+            border: 0 !important;
         }
     }
 
-    &__link {
-        @extend %radius;
-        @extend %padding-s;
-        @extend %padding-site-m;
-        @extend %margin-all-s;
-        @extend %text-menu;
+    &__title-wrapper {
+        @extend %margin-l;
 
-        display: block;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: -$s;
+    }
+
+    &__title {
+        @extend %sub-title;
+        @extend %padding-all-s;
+    }
+
+    &__label {
+        @extend %radius-s;
+        @extend %label;
+        @extend %padding-all-xs;
+        @extend %padding-site-s;
+
         background-color: $gray;
         transition: $transition;
+        font-weight: $bold;
+        margin-right: $s;
 
         &:hover {
             background-color: $dark-gray;
+        }
+
+        &:first-child {
+            margin-right: 0;
+        }
+    }
+
+    &__excerpt {
+        @extend %text;
+
+        text-align: left;
+        margin-top: $s;
+        margin-bottom: $xl;
+    }
+
+    &__link {
+        @extend %radius-s;
+        @extend %padding-m;
+        @extend %padding-site-m;
+        @extend %text-major;
+
+        display: block;
+        background-color: $dark;
+        transition: $transition;
+        color: $light;
+        font-weight: $bold;
+
+        &:hover {
+            background-color: $light-dark;
         }
 
         &.-is-active {
             background-color: $special;
             font-weight: $bold;
         }
+    }
+
+    &__empty {
+        @extend %padding;
     }
 }

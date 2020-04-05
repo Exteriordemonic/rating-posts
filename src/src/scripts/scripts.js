@@ -1,3 +1,12 @@
-import '../styles/style.scss';
+import "../styles/style.scss";
 
-console.log('webpack starterkit');
+// import external dependencies
+import anAjaxPosts from "./components/an-ajax-posts";
+
+console.log("webpack starterkit");
+
+
+
+$(document).ready(function () {
+    anAjaxPosts.init();
+});

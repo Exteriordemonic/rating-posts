@@ -16,3 +16,42 @@
         text-decoration: none !important;
     }
 }
+
+%sub-title {
+    color: $black !important;
+    font-size: 20px !important;
+    line-height: 1.2em !important;
+    font-family: manrope-regular;
+    margin: 0 !important;
+}
+
+%label {
+    color: #545CC0 !important;
+    font-size: 12px !important;
+    line-height: 1.2em !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+
+    &:hover,
+    &:focus {
+        text-decoration: none !important;
+    }
+}
+
+%text {
+    color: #656565;
+    font-size: 14px !important;
+    line-height: 1.4em !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+%text-major {
+    font-size: 16px !important;
+    line-height: 1.4em !important;
+    font-family: manrope-regular !important;
+    letter-spacing: 1px;
+
+    &:hover,
+    &:focus {
+        text-decoration: none !important;
+    }
+}
