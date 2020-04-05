@@ -1,0 +1,44 @@
+.an-summary-list {
+    @extend %radius;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: -$s -$s 0;
+
+    svg {
+        height: $m;
+        width: $m;
+    }
+
+    &__elem {
+        margin: $s $s 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__rate {
+        @extend %sub-title;
+
+        font-weight: $bold;
+        margin-right: $s !important;
+    }
+
+    &__name {
+        @extend %label;
+        padding-top: $s;
+        display: block;
+        text-align: left;
+        font-weight: $bold;
+        color: #A1A1A1 !important;
+        font-family: "Helvetica Neue",
+            Helvetica,
+            Arial,
+            sans-serif !important;
+    }
+}

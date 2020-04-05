@@ -1,0 +1,69 @@
+.an-single {
+    $root: &;
+    background-color: $gray;
+    padding-bottom: $xl;
+
+    &__wrapper {
+        @extend %padding-xl;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: $l;
+
+        &--erfahrungen {
+            display: grid;
+        }
+
+        &--kundigen {
+            display: none;
+        }
+    }
+
+    &__wrapper {
+        &.-is-active {
+            #{$root}__row {
+                &--erfahrungen {
+                    display: none;
+                }
+
+                &--kundigen {
+                    display: grid;
+                }
+            }
+        }
+    }
+
+    &__hide {
+        position: absolute;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    h1 {
+        @extend %title;
+        margin-bottom: $m !important;
+        display: block;
+    }
+
+    strong {
+        @extend %sub-title;
+        margin-bottom: $xl !important;
+        font-weight: $bold;
+        display: block;
+    }
+
+    p {
+        @extend %text-major;
+        font-family: "Helvetica Neue",
+            Helvetica,
+            Arial,
+            sans-serif !important;
+        margin-bottom: $m !important;
+
+        &:last-child {
+            margin: 0 !important;
+        }
+    }
+}

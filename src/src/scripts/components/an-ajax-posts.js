@@ -17,7 +17,10 @@ const anAjaxPosts = {
         this.class = CLASS;
         console.log("init", this.elem);
 
-        this.addEvents();
+        if (this.elem) {
+            this.addEvents();
+        }
+
     },
 
     addEvents() {

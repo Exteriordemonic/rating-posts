@@ -1,0 +1,42 @@
+.an-single-tabs {
+    @extend %radius;
+    @extend %padding-l;
+    @extend %padding-site-xl;
+    @extend %margin-0-auto;
+
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $l;
+    text-align: center;
+
+    &__item {
+        width: 100%;
+    }
+
+    &__link {
+        @extend %radius-s;
+        @extend %padding-m;
+        @extend %padding-site-m;
+        @extend %margin-all-s;
+        @extend %sub-title;
+
+        display: block;
+        background-color: $light;
+        border: 1px solid $gray;
+        transition: $transition;
+        color: $label-color !important;
+        width: 100%;
+
+        &:hover {
+            background-color: $dark-gray;
+        }
+
+        &.-is-active {
+            color: $light !important;
+            background-color: $label-background-color;
+            border-color: $label-background-color;
+            font-weight: $bold;
+        }
+    }
+}

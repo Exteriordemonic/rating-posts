@@ -1,0 +1,100 @@
+.an-card {
+    @extend %radius;
+    @extend %padding-all-xxl;
+
+    background-color: $light;
+
+    &--empty {
+        grid-column: span 3;
+
+        @include mediaTo(sm) {
+            grid-column: span 1;
+        }
+    }
+
+
+    &__image-wrapper {
+        @extend %radius;
+        position: relative;
+        // Ratio 6:9
+        width: 100%;
+        padding-top: 66.67%;
+        border: 1px solid $gray;
+        margin-bottom: $l;
+
+        img {
+            @extend %absolute;
+            @extend %image;
+
+            object-fit: contain;
+            border: 0 !important;
+            margin: 0 !important;
+        }
+    }
+
+    &__title-wrapper {
+        @extend %margin-l;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: -$s;
+    }
+
+    &__title {
+        @extend %sub-title;
+        @extend %padding-all-s;
+    }
+
+    &__label {
+        @extend %radius-s;
+        @extend %label;
+        @extend %padding-all-xs;
+        @extend %padding-site-s;
+
+        background-color: $gray;
+        transition: $transition;
+        font-weight: $bold;
+        margin-right: $s;
+
+        &:hover {
+            background-color: $dark-gray;
+        }
+
+        &:first-child {
+            margin-right: 0;
+        }
+    }
+
+    &__excerpt {
+        @extend %text;
+
+        text-align: left;
+        margin-top: $s;
+        margin-bottom: $xl;
+    }
+
+    &__link {
+        @extend %radius-s;
+        @extend %padding-m;
+        @extend %padding-site-m;
+        @extend %text-major;
+
+        display: block;
+        background-color: $dark;
+        transition: $transition;
+        color: $light;
+        font-weight: $bold;
+        text-align: center;
+
+        &:hover {
+            background-color: $light-dark;
+        }
+
+        &.-is-active {
+            background-color: $special;
+            font-weight: $bold;
+        }
+    }
+}

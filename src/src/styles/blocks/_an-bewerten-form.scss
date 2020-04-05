@@ -1,0 +1,12 @@
+.an-bewerten-form {
+    @extend %radius;
+    @extend %padding-all-xxl;
+    background-color: $light;
+
+    &__title {
+        @extend %title;
+        color: $dark !important;
+        margin-bottom: $xl !important;
+        text-align: center;
+    }
+}

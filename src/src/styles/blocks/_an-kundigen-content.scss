@@ -1,0 +1,38 @@
+.an-kundigen-content {
+    @extend %radius;
+
+    grid-column: span 2;
+
+    @include mediaTo(md) {
+        grid-column: span 1;
+    }
+
+    &__item {
+        @extend %radius;
+        @extend %padding-all-xl;
+        background-color: $light;
+        position: relative;
+        height: 100%;
+        padding-bottom: $xxl;
+        margin-bottom: $xxl;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__dsc {
+        @extend %text-major;
+    }
+
+    &__title {
+        @extend %sub-title;
+        color: $dark !important;
+        margin-bottom: $xl !important;
+    }
+
+    img {
+        border: 0 !important;
+        display: block;
+    }
+}

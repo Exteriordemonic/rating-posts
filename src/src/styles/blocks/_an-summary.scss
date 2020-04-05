@@ -1,0 +1,33 @@
+.an-summary {
+    @extend %radius;
+
+    &__wrapper {
+        @extend %radius;
+        padding-top: $l;
+        padding-bottom: $s;
+        background-color: $gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__rate {
+        @extend %text-menu;
+
+        font-weight: $bold;
+    }
+
+    &__count {
+        @extend %label;
+        padding-top: $s;
+        display: block;
+        text-align: center;
+        font-weight: $bold;
+        color: #A1A1A1 !important;
+        font-family: "Helvetica Neue",
+            Helvetica,
+            Arial,
+            sans-serif !important;
+    }
+}

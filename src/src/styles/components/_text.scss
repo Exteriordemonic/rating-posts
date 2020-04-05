@@ -23,10 +23,15 @@
     line-height: 1.2em !important;
     font-family: manrope-regular;
     margin: 0 !important;
+
+    &:hover,
+    &:focus {
+        text-decoration: none !important;
+    }
 }
 
 %label {
-    color: #545CC0 !important;
+    color: $label-color !important;
     font-size: 12px !important;
     line-height: 1.2em !important;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;

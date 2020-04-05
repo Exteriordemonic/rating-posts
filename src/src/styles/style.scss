@@ -7,10 +7,22 @@
 /** Components */
 @import "components/container";
 @import "components/text";
+@import "components/an-stars";
 
 /** Blocks */
 @import "./blocks/an-tabs";
+@import "./blocks/an-single-tabs";
 @import "./blocks/an-posts";
+@import "./blocks/an-bredcramps";
+@import "./blocks/an-card";
+@import "./blocks/an-rating-summary";
+@import "./blocks/an-summary";
+@import "./blocks/an-summary-list";
+@import "./blocks/an-kundigen-summary";
+@import "./blocks/an-kundigen-content";
+@import "./blocks/an-bewerten-dsc";
+@import "./blocks/an-bewerten-form";
 
 /** Layouts */
 @import "./layouts/anbieters";
+@import "./layouts/anbieter-single";

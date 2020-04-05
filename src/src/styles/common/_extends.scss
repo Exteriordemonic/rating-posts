@@ -128,6 +128,11 @@ $xxl: gutter(5);
   }
 
   &-site {
+    &-xs {
+      margin-left: $xs;
+      margin-right: $xs;
+    }
+
     &-s {
       margin-left: $s;
       margin-right: $s;
@@ -218,6 +223,11 @@ $xxl: gutter(5);
   }
 
   &-site {
+    &-xs {
+      padding-left: $xs;
+      padding-right: $xs;
+    }
+
     &-s {
       padding-left: $s;
       padding-right: $s;

@@ -1,0 +1,142 @@
+.an-stars {
+
+    svg {
+
+        path {
+            fill: #C6C8EA;
+        }
+    }
+
+    &--0 {
+        svg {
+            path {
+                fill: #C6C8EA;
+            }
+        }
+    }
+
+    &--1 {
+        svg {
+            &:first-child {
+                path {
+                    fill: $special;
+                }
+            }
+        }
+    }
+
+    &--2 {
+        svg {
+            &:nth-child(-n+2) {
+                path {
+                    fill: $special;
+                }
+            }
+        }
+    }
+
+    &--3 {
+        svg {
+            &:nth-child(-n+3) {
+                path {
+                    fill: $special;
+                }
+            }
+        }
+    }
+
+    &--4 {
+        svg {
+            &:nth-child(-n+4) {
+                path {
+                    fill: $special;
+                }
+            }
+        }
+    }
+
+    &--5 {
+        svg {
+            &:nth-child(-n+5) {
+                path {
+                    fill: $special;
+                }
+            }
+        }
+    }
+
+    &--05 {
+        svg {
+            &:first-child {
+                path {
+                    fill: url(#MyGradient);
+                }
+            }
+        }
+    }
+
+    &--15 {
+        svg {
+            &:nth-child(-n+1) {
+                path {
+                    fill: $special;
+                }
+            }
+
+            &:nth-child(2) {
+                path {
+                    fill: url(#MyGradient);
+                }
+            }
+        }
+    }
+
+    &--25 {
+        svg {
+            &:nth-child(-n+2) {
+                path {
+                    fill: $special;
+                }
+            }
+
+            &:nth-child(3) {
+                path {
+                    fill: url(#MyGradient);
+                }
+            }
+        }
+    }
+
+    &--35 {
+        svg {
+            &:nth-child(-n+3) {
+                path {
+                    fill: $special;
+                }
+            }
+
+            &:nth-child(4) {
+                path {
+                    fill: url(#MyGradient);
+                }
+            }
+        }
+    }
+
+    &--45 {
+        svg {
+            &:nth-child(-n+4) {
+                path {
+                    fill: $special;
+                }
+            }
+
+            &:nth-child(5) {
+                path {
+                    fill: url(#MyGradient);
+                }
+            }
+        }
+    }
+
+}

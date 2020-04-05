@@ -29,3 +29,18 @@ function anbieter_taxonomy_template( $template ) {
   }
   return $template;
 }
+
+add_filter('template_include', 'anbieter_single_template');
+
+function anbieter_single_template( $template ) {
+  if ( is_singular('anbieter') ) {
+    $theme_files = array('single-anbieter.php', 'rating-posts/single-anbieter.php');
+    $exists_in_theme = locate_template($theme_files, false);
+    if ( $exists_in_theme != '' ) {
+      return $exists_in_theme;
+    } else {
+      return RP_PATH . 'templates/single-anbieter.php';
+    }
+  }
+  return $template;
+}

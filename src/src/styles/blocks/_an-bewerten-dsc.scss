@@ -1,0 +1,35 @@
+.an-bewerten-dsc {
+    @extend %radius;
+    @extend %padding-all-xl;
+    background-color: $light;
+    position: relative;
+    height: 100%;
+    padding-bottom: $xxl;
+
+    &__dsc {
+        @extend %text-major;
+    }
+
+    &__link {
+        @extend %radius-s;
+        @extend %padding-m;
+        @extend %padding-site-m;
+        @extend %text-major;
+        @extend %absolute;
+
+        top: unset;
+        bottom: $xl;
+        width: calc(100% - #{gutter(8)});
+
+        display: block;
+        background-color: $special;
+        transition: $transition;
+        color: $light;
+        font-weight: $bold;
+        text-align: center;
+
+        &:hover {
+            background-color: $special-light;
+        }
+    }
+}

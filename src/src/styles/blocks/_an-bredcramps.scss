@@ -1,0 +1,31 @@
+.an-bredcramps {
+    @extend %padding-l;
+    @extend %margin-0;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: uppercase;
+
+    &__item {
+        @extend %label;
+
+        color: $black !important;
+        font-weight: $bold;
+    }
+
+    &__link {
+        color: $label-color !important;
+
+        &:after {
+            content: '/';
+            @extend %padding-site-s;
+            color: $dark-gray;
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: none !important;
+        }
+    }
+}
