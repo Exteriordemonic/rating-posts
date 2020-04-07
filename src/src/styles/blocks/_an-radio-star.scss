@@ -1,0 +1,48 @@
+.an-radio-star {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 2.5px;
+
+    input {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    svg {
+        @extend %padding-site-xs;
+
+        width: $xl;
+        height: $xl;
+        cursor: pointer;
+
+        &:hover {
+            path {
+                fill: $special;
+            }
+
+            &~svg {
+                path {
+                    fill: #C6C8EA !important;
+                }
+            }
+        }
+    }
+
+    .an-stars {
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &:hover {
+            svg {
+                path {
+                    fill: $special;
+                }
+            }
+        }
+    }
+}

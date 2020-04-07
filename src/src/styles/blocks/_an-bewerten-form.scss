@@ -1,4 +1,6 @@
 .an-bewerten-form {
+    $root: &;
+
     @extend %radius;
     @extend %padding-all-xxl;
     background-color: $light;
@@ -8,5 +10,163 @@
         color: $dark !important;
         margin-bottom: $xl !important;
         text-align: center;
+    }
+
+    &__list {
+        @extend %margin-0-auto;
+        max-width: gutter(114);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $xl;
+        row-gap: $xxl;
+        margin-bottom: $xxl;
+        padding-bottom: $s;
+    }
+
+    &__item {
+        @extend %padding-all-xl;
+        @extend %radius;
+        border: 1px solid $gray;
+        transition: $transition;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: $xxl;
+        position: relative;
+
+        &:hover {
+            background-color: $label-color;
+
+            #{$root}__info {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__label {
+        @extend %absolute;
+        @extend %text-menu;
+
+        top: unset;
+        bottom: -$l;
+        text-align: center;
+        font-weight: $bold;
+        white-space: nowrap;
+
+        &--small,
+        &--big {
+            display: block;
+            position: initial;
+            margin-bottom: $s;
+            text-align: left;
+        }
+
+        &--big {
+            @extend %sub-title;
+            margin-bottom: $s !important;
+        }
+    }
+
+    &__info {
+        @extend %absolute;
+        @extend %padding-xs;
+        @extend %padding-site-s;
+        @extend %label;
+
+        border-radius: gutter(10);
+        text-transform: uppercase;
+        background-color: $special;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 24px;
+        width: 80px;
+        text-align: center;
+        font-weight: $bold;
+        color: $black !important;
+        opacity: 0;
+        transition: $transition;
+        pointer-events: none;
+
+        &--left {
+            right: unset;
+            transform: translateX(-50%);
+        }
+
+        &--right {
+            left: unset;
+            width: 35px;
+            transform: translateX(50%);
+        }
+    }
+
+    &__wrapper {
+        @extend %padding-xxl;
+        border-top: 1px solid $gray;
+    }
+
+    &__wrapper-input {
+        @extend %margin-0-auto;
+
+        max-width: gutter(100);
+        margin-bottom: $l;
+    }
+
+    &__input {
+        @extend %padding-all-s;
+        @extend %text-major;
+        border-radius: $xs !important;
+        background-color: $gray !important;
+        margin: 0 !important;
+        border: 0 !important;
+        color: $black !important;
+        outline: 0 !important;
+        box-shadow: none !important;
+        line-height: $l !important;
+        border: 2px solid transparent !important;
+        font-weight: 400 !important;
+        font-family: "Helvetica Neue",
+            Helvetica,
+            Arial,
+            sans-serif !important;
+        transition: $transition;
+        width: 100%;
+
+        &--p {
+            padding: $m $l !important;
+        }
+
+        &::placeholder {
+            color: #C6C8EA !important;
+            font-weight: 400 !important;
+        }
+
+        &:focus {
+            border: 2px solid $dark !important;
+        }
+    }
+
+    &__button {
+        @extend %radius-s;
+        @extend %padding-m;
+        @extend %padding-site-xxl;
+        @extend %text-major;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $dark;
+        transition: $transition;
+        color: $light;
+        font-weight: $bold;
+        text-align: center;
+        border-radius: $xs !important;
+        border: transparent !important;
+        margin: gutter(7) auto 0;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $light-dark;
+        }
     }
 }

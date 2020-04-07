@@ -22,7 +22,7 @@
     <?php if($_GET['tab'] == 'bewerten'): ?>
     <!-- button -->
     <a href="./?tab=erfahrungen" class="an-card__link">
-        <?= __('Zum Erfahrungen','rating-post'); ?>
+        <?php include RP_PATH.'templates/svg/arrow-left.php'; ?> <?= __('Zum Erfahrungen','rating-post'); ?>
     </a>
     <?php else: ?>
     <!-- button -->

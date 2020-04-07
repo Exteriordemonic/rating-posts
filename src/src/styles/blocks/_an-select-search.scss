@@ -1,0 +1,33 @@
+.an-select-search {
+    @extend %radius-s;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    flex-wrap: nowrap;
+    transition: $transition;
+    border: 2px solid transparent !important;
+
+    &.-is-active {
+        border: 2px solid $dark !important;
+    }
+
+    &__item {
+        @extend %padding-xs;
+        @extend %padding-site-s;
+        @extend %label;
+        color: $light !important;
+        background-color: $label-color;
+        margin-right: $xs;
+        white-space: nowrap;
+    }
+
+    &__remove {
+        @extend %label;
+        margin-left: $xs;
+        border: 0;
+        color: $light !important;
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+    }
+}

@@ -8,6 +8,7 @@
 @import "components/container";
 @import "components/text";
 @import "components/an-stars";
+@import "components/dropdown-input";
 
 /** Blocks */
 @import "./blocks/an-tabs";
@@ -22,6 +23,8 @@
 @import "./blocks/an-kundigen-content";
 @import "./blocks/an-bewerten-dsc";
 @import "./blocks/an-bewerten-form";
+@import "./blocks/an-radio-star";
+@import "./blocks/an-select-search";
 
 /** Layouts */
 @import "./layouts/anbieters";

@@ -81,12 +81,18 @@
         @extend %padding-site-m;
         @extend %text-major;
 
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: $dark;
         transition: $transition;
         color: $light;
         font-weight: $bold;
         text-align: center;
+
+        svg {
+            margin-right: $m;
+        }
 
         &:hover {
             background-color: $light-dark;
