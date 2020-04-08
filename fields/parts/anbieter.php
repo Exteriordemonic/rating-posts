@@ -24,6 +24,20 @@ $anbieter
     ->addTab('Bewerten', ['placement' => 'side'])
         ->addWysiwyg('bewerten_dsc', ['label'=>'Bewerten', 'new_lines'=>'br'])
         ->addUrl('bewerten_link', ['label'=>'Link'])   
+        ->addRepeater('rates', ['label'=>'Content'])
+            ->addGroup('content', ['label'=> ''])
+                ->addNumber('deineBewertung', ['label'=>'deineBewertung', 'min'=>1, 'max'=>5, 'wrapper'=>['width'=>'33%']])
+                ->addNumber('kundenservice', ['label'=>'kundenservice', 'min'=>1, 'max'=>5, 'wrapper'=>['width'=>'33%']])
+                ->addNumber('erreichbarkeit', ['label'=>'erreichbarkeit', 'min'=>1, 'max'=>5, 'wrapper'=>['width'=>'33%']])
+                ->addNumber('preisLeistungsVerhaeltnis', ['label'=>'preisLeistungsVerhaeltnis', 'min'=>1, 'max'=>5, 'wrapper'=>['width'=>'33%']])
+                ->addNumber('sicherheitZuverlae', ['label'=>'sicherheitZuverlae', 'min'=>1, 'max'=>5, 'wrapper'=>['width'=>'33%']])
+                ->addNumber('bankWeiterempfehlen', ['label'=>'bankWeiterempfehlen', 'min'=>1, 'max'=>5, 'wrapper'=>['width'=>'33%']])
+                ->addTextarea('message')
+                ->addText('mail')
+                ->addText('name')
+                ->addText('produkt')
+            ->endGroup()
+        ->endRepeater()
         ;
 
 add_action('acf/init', function() use ($anbieter) {

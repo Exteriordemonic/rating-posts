@@ -16,6 +16,7 @@ include RP_PATH.'functions/anbieter.php';
 include RP_PATH.'functions/anbieter-type.php';
 include RP_PATH.'functions/templates.php';
 include RP_PATH.'functions/include-dists.php';
+include RP_PATH.'functions/anbieter-rates.php';
 
 include RP_PATH.'fields/setup.php';
 

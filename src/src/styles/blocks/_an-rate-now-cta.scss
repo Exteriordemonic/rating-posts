@@ -1,0 +1,70 @@
+.an-rate-now-cta {
+    @extend %padding-all-xl;
+    @extend %radius;
+    background-color: $light;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    grid-column: span 2;
+
+    @include mediaTo(sm) {
+        grid-column: span 1;
+    }
+
+    &__title {
+        @extend %sub-title;
+        line-height: $xl !important;
+        color: $dark !important;
+    }
+
+    .an-radio-star {
+        @extend %margin-site-xl;
+        bottom: 0;
+    }
+
+    &__button {
+        @extend %radius-s;
+        @extend %padding-xs;
+        @extend %padding-site-m;
+        @extend %text-menu;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $dark;
+        transition: $transition;
+        color: $light !important;
+        font-weight: $bold;
+        text-align: center;
+        border: 0 !important;
+        border-radius: $s !important;
+        margin-right: $m;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $light-dark;
+        }
+    }
+
+    &__link {
+        @extend %text;
+        line-height: $xl !important;
+        transition: $transition;
+
+        span {
+            color: $dark !important;
+            font-weight: bold;
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: none !important;
+            opacity: 0.6;
+        }
+    }
+
+    .an-bewerten-form__info,
+    .an-bewerten-form__label {
+        display: none !important;
+    }
+}

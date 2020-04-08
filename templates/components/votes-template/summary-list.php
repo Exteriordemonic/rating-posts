@@ -2,23 +2,23 @@
     $rating_list = [
         [
             'name'=>__('Kundenservice', 'rating-post'),
-            'rate'=>'3.2',
+            'rate'=>$rateOveral['kundenservice'],
         ],
         [
             'name'=>__('Erreichbarkeit', 'rating-post'),
-            'rate'=>'4.0',
+            'rate'=>$rateOveral['erreichbarkeit'],
         ],
         [
             'name'=>__('Preis-Leistungs-Verhältnis', 'rating-post'),
-            'rate'=>'5.0',
+            'rate'=>$rateOveral['preisLeistungsVerhaeltnis'],
         ],
         [
             'name'=>__('Sicherheit & Zuverlässigkeit', 'rating-post'),
-            'rate'=>'2.1',
+            'rate'=>$rateOveral['sicherheitZuverlae'],
         ],
         [
             'name'=>__('Bank weiterempfehlen', 'rating-post'),
-            'rate'=>'4.9',
+            'rate'=>$rateOveral['bankWeiterempfehlen'],
         ],
     ];
 ?>
@@ -30,7 +30,7 @@
         <div class="an-summary-list__wrapper">
             <!-- NUM -->
             <span class="an-summary-list__rate">
-                <?= $item['rate'] ?>
+                <?= $item['rate'] ?>/5
             </span>
             <!-- STARTS -->
             <?php include RP_PATH.'templates/svg/star.php'; ?>
