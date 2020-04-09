@@ -39,8 +39,8 @@
             <div class="an-bewerten-form__input an-select-search" data-an-dropdown>
                 <!-- Search input -->
                 <div class="an-dropdown">
-                    <input class="an-dropdown__input" type="text" placeholder="Search.." id="myInput" autocomplete="off"
-                        data-an-dropdown-input>
+                    <input class="an-dropdown__input" type="text" placeholder="<?= __('Suchen','rating-post'); ?>..."
+                        id="myInput" autocomplete="off" data-an-dropdown-input>
                     <ul class="an-dropdown__list">
                         <li class="an-dropdown__item" data-an-dropdown-item>About</li>
                         <li class="an-dropdown__item" data-an-dropdown-item>Base</li>
