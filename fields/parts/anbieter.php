@@ -36,6 +36,7 @@ $anbieter
                 ->addText('mail')
                 ->addText('name')
                 ->addText('produkt')
+                ->addText('date')
             ->endGroup()
         ->endRepeater()
         ;

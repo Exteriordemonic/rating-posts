@@ -28,6 +28,10 @@
         color: $label-color !important;
         width: 100%;
 
+        @include mediaTo(xs) {
+            font-size: 14px !important;
+        }
+
         &:hover {
             background-color: $dark-gray;
         }

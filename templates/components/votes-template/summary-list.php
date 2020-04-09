@@ -24,13 +24,13 @@
 ?>
 
 <?php if($rating_list) :?>
-<ul class="an-summary-list">
+<ul class="an-summary-list <?php if($rs_single) { echo 'an-summary-list--single'; } ;?>">
     <?php foreach ($rating_list as $item) : ?>
     <li class="an-summary-list__elem">
         <div class="an-summary-list__wrapper">
             <!-- NUM -->
             <span class="an-summary-list__rate">
-                <?= $item['rate'] ?>/5
+                <?= $item['rate'] ?> <?php if(!$rs_single) { echo '/5'; } ;?>
             </span>
             <!-- STARTS -->
             <?php include RP_PATH.'templates/svg/star.php'; ?>

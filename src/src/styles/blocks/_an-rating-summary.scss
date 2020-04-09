@@ -11,6 +11,10 @@
         grid-template-columns: repeat(2, 1fr);
         gap: $xl;
 
+        @include mediaTo(lg) {
+            grid-template-columns: 1fr;
+        }
+
         @include mediaTo(md) {
             grid-template-columns: 1fr;
         }
@@ -19,6 +23,10 @@
     &__dsc {
         @extend %padding-xxl;
         @extend %text-major;
+
+        @include mediaTo(sm) {
+            padding-bottom: $l !important;
+        }
     }
 
     &__link {
@@ -38,6 +46,11 @@
         color: $light;
         font-weight: $bold;
         text-align: center;
+
+        @include mediaTo(lg) {
+            position: initial;
+            width: 100%;
+        }
 
         &:hover {
             background-color: $special-light;

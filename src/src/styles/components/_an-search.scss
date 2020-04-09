@@ -1,0 +1,49 @@
+.an-search {
+    @extend %margin-all-s;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    margin-bottom: $s !important;
+    text-align: left;
+    width: 250px;
+    height: $xl;
+
+
+
+    @include mediaTo(lg) {
+        width: auto;
+    }
+
+    @include mediaTo(sm) {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: $dark;
+        border: 0;
+        border-radius: $xs !important;
+        width: $xl;
+        height: $xl;
+        margin-left: $s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $light-dark;
+        }
+    }
+
+    input {
+        height: $xl !important;
+    }
+
+    .an-select-search__item {
+        display: none;
+    }
+}

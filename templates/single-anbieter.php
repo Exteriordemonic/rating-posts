@@ -23,6 +23,7 @@
             'mail' => $_POST['mail'],
             'name' => $_POST['name'],
             'produkt' => $_POST['produkt'],
+            'date' => $_POST['date'],
         ];
 
         $row = ['content'=>$formOutput];
@@ -57,6 +58,8 @@
                 <?php include RP_PATH.'templates/components/rating-summary.php'; ?>
                 <!-- rate now -->
                 <?php include RP_PATH.'templates/components/rate-now-cta.php'; ?>
+                <!-- rate list -->
+                <?php include RP_PATH.'templates/components/rate-list.php'; ?>
             </div>
             <div class="an-single__row an-single__row--kundigen">
                 <!-- card -->

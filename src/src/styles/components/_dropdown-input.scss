@@ -19,7 +19,7 @@
         opacity: 0;
         transition: $transition;
         max-height: gutter(50);
-        box-shadow: 0px 0px 1px $label-color;
+        box-shadow: inset 0px 0px 1px 0 $label-color;
         transform-origin: top;
 
         &:hover {
@@ -65,6 +65,56 @@
             background-color: $label-color;
             color: $light !important;
             cursor: pointer;
+        }
+    }
+
+    // Search
+    &--search {
+        position: relative;
+
+        #{$root}__input {
+            @extend %text-menu;
+
+            border-radius: $xs !important;
+            display: block;
+            background-color: $gray;
+            transition: $transition;
+            padding: $s !important;
+            font-weight: 400;
+            border: 2px solid transparent !important;
+
+            &::placeholder {
+                color: #8C92D5 !important;
+                font-weight: 400;
+            }
+
+            &:focus {
+                border: 2px solid #545CC0 !important;
+            }
+
+            @include mediaTo(sm) {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+        #{$root}__list {
+            top: calc(100% - 2px);
+            margin: 0 auto;
+            z-index: -1;
+            padding: $s !important;
+
+        }
+
+        #{$root}__item {
+            a {
+                @extend #{$root}__item;
+                @extend %text-menu;
+                font-weight: 400;
+                display: block;
+                font-size: 14px !important;
+            }
         }
     }
 }

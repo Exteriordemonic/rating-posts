@@ -21,6 +21,14 @@
         row-gap: $xxl;
         margin-bottom: $xxl;
         padding-bottom: $s;
+
+        @include mediaTo(md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mediaTo(sm) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__item {
@@ -64,6 +72,14 @@
         &--big {
             @extend %sub-title;
             margin-bottom: $s !important;
+
+            @include mediaTo(xs) {
+                font-size: 14px !important;
+            }
+        }
+
+        @include mediaTo(xs) {
+            white-space: initial;
         }
     }
 

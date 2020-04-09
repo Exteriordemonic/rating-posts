@@ -1,10 +1,33 @@
 <?php 
     global $posts;
+    
+    
+    if($_GET['s']) {
+        $posts = get_posts([
+            'post_type' => 'anbieter',
+            'post_status' => 'publish',
+            'numberposts' => -1,
+            "s" =>$_GET['s']
+            // 'order' => 'ASC'
+        ]);
+    }
+
     $post_ids = array();
     foreach($posts as $post) $post_ids[] = $post->ID;
-?>
+    ?>
 
 <?php if($post_ids) : ?>
+
+<svg class="an-single__hide">
+    <defs>
+        <linearGradient id="MyGradient">
+            <stop offset="0%" stop-color="#F1BD48" />
+            <stop offset="50%" stop-color="#F1BD48" />
+            <stop offset="51%" stop-color="#C6C8EA" />
+            <stop offset="100%" stop-color="#C6C8EA" />
+        </linearGradient>
+    </defs>
+</svg>
 
 <ul class="an-posts" id="an-posts">
     <?php foreach ($posts as $item) : ?>
@@ -29,12 +52,22 @@
             <?php endforeach ?>
         </div>
         <!-- excerpt -->
-        <p class="an-posts__excerpt">
+        <?php /* <p class="an-posts__excerpt">
             <?= get_the_excerpt($item->id) ?>
-        </p>
+        </p> */?>
+        <?php
+        $rateOveral = get_rates($item->id);
+        if($rateOveral) {
+            include RP_PATH.'templates/components/votes-template/summary.php'; 
+        }
+        ?>
         <!-- button -->
         <a href="<?= get_permalink($item->id) ?>" class="an-posts__link">
             <?= __('Bewertungen lesen','rating-post'); ?>
+        </a>
+        <!-- button -->
+        <a href="<?= get_permalink($item->id) ?>/?tab=bewerten" class="an-posts__link -is-active">
+            <?= __('Bewertung schreiben','rating-post'); ?>
         </a>
         <?= $item->id ;?>
     </li>

@@ -54,6 +54,8 @@ const anAjaxPosts = {
         var $class = this.class;
         $posts.classList.add($class);
 
+        console.log($url);
+
         $(POSTS).load($url + ' ' + POSTS + '>*', function () {
             $posts.classList.remove($class);
         });

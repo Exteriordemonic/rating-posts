@@ -12,6 +12,14 @@
         grid-template-columns: 1fr 2fr;
         gap: $l;
 
+        @include mediaTo(lg) {
+            grid-template-columns: 2fr 3fr;
+        }
+
+        @include mediaTo(sm) {
+            grid-template-columns: 1fr;
+        }
+
         &--erfahrungen {
             display: grid;
         }

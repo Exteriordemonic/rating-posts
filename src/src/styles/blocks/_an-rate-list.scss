@@ -1,0 +1,128 @@
+.an-rate-list {
+    $root: &;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $l;
+    grid-column: span 2;
+    margin: 0;
+
+    @include mediaTo(sm) {
+        grid-column: span 1;
+    }
+
+    &__item {
+        @extend %radius;
+
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: $l;
+        background-color: $light;
+
+        @include mediaTo(lg) {
+            grid-template-columns: 2fr 3fr;
+        }
+
+        @include mediaTo(md) {
+            grid-template-columns: 1fr;
+        }
+
+        .an-summary-list {
+            opacity: 0;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: $transition;
+            display: none;
+        }
+
+        &.-is-active {
+
+            .an-summary-list {
+                transform: scaleY(1);
+                opacity: 1;
+                display: flex;
+            }
+
+            #{$root}__dsc {
+                -webkit-line-clamp: initial;
+            }
+        }
+    }
+
+    &__wrapper {
+        @extend %padding-all-xl;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        @extend %sub-title;
+        color: $dark !important;
+
+        &--info {
+            color: #8C92D5 !important;
+            margin-bottom: $s !important;
+        }
+    }
+
+    &__date {
+        @extend %text-major;
+        color: #C7C7C7;
+    }
+
+    &__tags {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__dsc {
+        @extend %text-major;
+        font-family: "Helvetica Neue",
+            Helvetica,
+            Arial,
+            sans-serif !important;
+        color: #656565 !important;
+        display: block;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    &__more {
+        @extend %label;
+        color: $dark;
+        border: 0 !important;
+        background: transparent !important;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Helvetica Neue",
+            Helvetica,
+            Arial,
+            sans-serif !important;
+        font-weight: $bold;
+        cursor: pointer;
+        outline: 0 !important;
+
+        svg path {
+            fill: $dark;
+        }
+
+        &--in-dsc {
+            display: inline;
+            padding: 0;
+            font-weight: 900 !important;
+        }
+    }
+}

@@ -7,11 +7,22 @@
     align-items: center;
     text-transform: uppercase;
 
+    @include mediaTo(xs) {
+        flex-wrap: wrap;
+        padding-bottom: $s;
+    }
+
     &__item {
         @extend %label;
 
         color: $black !important;
         font-weight: $bold;
+        white-space: nowrap;
+
+        @include mediaTo(xs) {
+            padding: $xs;
+            font-size: 10px !important;
+        }
     }
 
     &__link {

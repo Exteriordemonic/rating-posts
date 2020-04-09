@@ -70,6 +70,7 @@
             <input class="an-bewerten-form__input" name="name" id="name" type="name">
         </div>
         <input type="hidden" name="produkt" data-an-dropdown-produkt>
+        <input type="hidden" name="date" value="<?= date('m.d.Y') ;?>">
         <button class="an-bewerten-form__button">
             <?= __('Erfahrungsbericht senden','rating-post'); ?>
         </button>
