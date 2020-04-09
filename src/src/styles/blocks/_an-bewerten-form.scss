@@ -28,6 +28,8 @@
 
         @include mediaTo(sm) {
             grid-template-columns: 1fr;
+            gap: $l;
+            row-gap: $m;
         }
     }
 
