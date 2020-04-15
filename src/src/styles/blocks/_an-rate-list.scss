@@ -50,6 +50,16 @@
 
     &__wrapper {
         @extend %padding-all-xl;
+
+        @include mediaTo(xs) {
+            &:nth-child(1) {
+                padding-bottom: 0 !important;
+            }
+
+            &:nth-child(2) {
+                padding-top: 0 !important;
+            }
+        }
     }
 
     &__header {
@@ -96,6 +106,12 @@
         text-overflow: ellipsis;
         margin: 0 !important;
         margin-bottom: 0 !important;
+
+        @include mediaTo(xs) {
+            font-size: 10px !important;
+            line-height: 1.6 !important;
+            -webkit-line-clamp: 5;
+        }
     }
 
     &__more {

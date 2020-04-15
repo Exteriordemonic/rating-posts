@@ -46,6 +46,10 @@
         border: 1px solid $gray;
         margin-bottom: $l;
 
+        @include mediaTo(xs) {
+            padding-top: 44.37%;
+        }
+
         img {
             @extend %absolute;
             @extend %image;

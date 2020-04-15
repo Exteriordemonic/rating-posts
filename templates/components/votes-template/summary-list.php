@@ -30,7 +30,7 @@
         <div class="an-summary-list__wrapper">
             <!-- NUM -->
             <span class="an-summary-list__rate">
-                <?= $item['rate'] ?> <?php if(!$rs_single) { echo '/5'; } ;?>
+                <?= $item['rate'] ?><?= '/5';?>
             </span>
             <!-- STARTS -->
             <?php include RP_PATH.'templates/svg/star.php'; ?>

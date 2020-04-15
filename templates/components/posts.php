@@ -37,9 +37,11 @@
     ?>
     <li class="an-posts__item">
         <!-- image -->
-        <figure class="an-posts__image-wrapper">
-            <?= get_the_post_thumbnail($item->id) ;?>
-        </figure>
+        <a href="<?= get_permalink($item->id) ?>">
+            <figure class="an-posts__image-wrapper">
+                <?= get_the_post_thumbnail($item->id) ;?>
+            </figure>
+        </a>
         <!-- title / term -->
         <div class="an-posts__title-wrapper">
             <h2 class="an-posts__title">

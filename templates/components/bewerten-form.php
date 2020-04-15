@@ -22,7 +22,7 @@
             <?php include RP_PATH.'templates/components/votes-template/radio-star.php'; ?>
         </li>
         <li class="an-bewerten-form__item">
-            <?php $name="Sicherheit & Zuverlä" ;?>
+            <?php $name="Sicherheit & Zuverlässigkeit" ;?>
             <?php include RP_PATH.'templates/components/votes-template/radio-star.php'; ?>
         </li>
         <li class="an-bewerten-form__item">
@@ -34,17 +34,18 @@
 
         <div class="an-bewerten-form__wrapper-input">
             <label for="" class="an-bewerten-form__label an-bewerten-form__label--small">
-                <?= __('Mit welchem Produkt hast Du Erfahrungen','rating-post'); ?>
+                <?= __('Mit welchem Produkt hast Du Erfahrungen?','rating-post'); ?>
             </label>
             <div class="an-bewerten-form__input an-select-search" data-an-dropdown>
                 <!-- Search input -->
                 <div class="an-dropdown">
-                    <input class="an-dropdown__input" type="text" placeholder="<?= __('Suchen','rating-post'); ?>..."
+                    <input class="an-dropdown__input" type="text"
+                        placeholder="<?= __('Girokonto, Geschäftskonto, Kreditkarte etc.','rating-post'); ?>"
                         id="myInput" autocomplete="off" data-an-dropdown-input>
                     <ul class="an-dropdown__list">
-                        <li class="an-dropdown__item" data-an-dropdown-item>About</li>
-                        <li class="an-dropdown__item" data-an-dropdown-item>Base</li>
-                        <li class="an-dropdown__item" data-an-dropdown-item>Blog</li>
+                        <li class="an-dropdown__item" data-an-dropdown-item>Girokonto</li>
+                        <li class="an-dropdown__item" data-an-dropdown-item>Geschäftskonto</li>
+                        <li class="an-dropdown__item" data-an-dropdown-item>Kreditkarte</li>
                     </ul>
                 </div>
             </div>

@@ -24,17 +24,35 @@
             background-color: transparent;
             margin-bottom: $s !important;
 
+            @include mediaTo(xs) {
+                flex-direction: column !important;
+                flex-wrap: wrap;
+                padding-top: $l !important;
+                padding-bottom: $s !important;
+            }
+
             #{$root}__rate {
                 @extend %sub-title;
                 line-height: $l !important;
                 position: relative;
                 top: 2px;
+
+                @include mediaTo(xs) {
+                    color: #000 !important;
+                    font-size: 14px !important;
+                    line-height: 1.2em !important;
+                    margin-top: $s !important;
+                }
             }
 
             .an-stars {
                 bottom: 0;
                 margin-right: $m !important;
                 height: $l;
+
+                @include mediaTo(xs) {
+                    margin-right: 0 !important;
+                }
             }
         }
     }

@@ -22,11 +22,11 @@
     <?php if($_GET['tab'] == 'bewerten'): ?>
     <!-- button -->
     <a href="./?tab=erfahrungen" class="an-card__link">
-        <?php include RP_PATH.'templates/svg/arrow-left.php'; ?> <?= __('Zum Erfahrungen','rating-post'); ?>
+        <?php include RP_PATH.'templates/svg/arrow-left.php'; ?> <?= __('Zu Erfahrungen','rating-post'); ?>
     </a>
     <?php else: ?>
     <!-- button -->
-    <a href="<?= get_permalink($item->id) ?>" class="an-card__link">
+    <a href="<?= get_field('ZumAngebot', $item->id) ?>" class="an-card__link">
         <?= __('Zum Angebot','rating-post'); ?>
     </a>
     <?php endif; ?>

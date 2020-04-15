@@ -23,7 +23,7 @@ $rates = array_reverse(get_field('rates'));
             <!-- more info -->
             <button class="an-rate-list__more" data-rate-list-more>
                 <?= __('Mehr Infos','rating-post'); ?>
-                <?php include RP_PATH.'templates/svg/arrow-down.php'; ?>
+                <?php //include RP_PATH.'templates/svg/arrow-down.php'; ?>
             </button>
             <!-- rate list -->
 

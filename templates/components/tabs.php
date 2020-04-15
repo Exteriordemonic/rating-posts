@@ -4,7 +4,7 @@ $tabs = get_terms( 'anbieter_type', array(
     'hide_empty' => false,
 ) );
 
-if(is_post_type_archive('anbieter')) $cur = 'All';
+if(is_post_type_archive('anbieter')) $cur = 'Alle';
  
 if(is_tax('anbieter_type')) $cur = get_queried_object()->slug;
 
@@ -20,9 +20,9 @@ function isTabActive($name, $cur) {
 
 <ul class="an-tabs">
     <li class="an-tabs__item">
-        <a class="an-tabs__link <?php isTabActive('All', $cur) ;?>" href="<?= get_post_type_archive_link('anbieter') ?>"
-            data-an-tab>
-            <?= __('All', 'rating-post') ?>
+        <a class="an-tabs__link <?php isTabActive('Alle', $cur) ;?>"
+            href="<?= get_post_type_archive_link('anbieter') ?>" data-an-tab>
+            <?= __('Alle', 'rating-post') ?>
         </a>
     </li>
     <?php foreach ($tabs as $item) : ?>

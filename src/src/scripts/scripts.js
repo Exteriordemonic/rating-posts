@@ -10,8 +10,6 @@ import anRateList from "./components/an-rate-list";
 
 console.log("webpack starterkit");
 
-
-
 $(document).ready(function () {
     anAjaxPosts.init();
     anSingleTabs.init();

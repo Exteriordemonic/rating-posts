@@ -5,7 +5,7 @@
         <?php include RP_PATH.'templates/components/votes-template/stars.php'; ?>
         <!-- NUM -->
         <span class="an-summary__rate">
-            <?= $rateOveral['deineBewertung'] ?> <?php if(!$rs_single) { echo 'von 5'; } ;?>
+            <?= $rateOveral['deineBewertung'] ?> <?= 'von 5';?>
         </span>
     </div>
     <!-- count votes -->
