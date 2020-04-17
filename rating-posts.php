@@ -3,7 +3,7 @@
 * Plugin Name: Rating Posts
 * Plugin URI: 
 * Description: Custom post type with rating + ACF.
-* Version: 0.1
+* Version: 1.0
 * Author: Kamil Mirosz
 * Author URI: kmirosz6@gmail.com
 **/
