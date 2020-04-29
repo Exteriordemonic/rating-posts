@@ -12,8 +12,8 @@
 
 <script>
     function testinput(re, str) {
-    const myReg = new RegExp(re, "g");
-    if (myReg.test(str)) {
+
+    if (str.startsWith(re)) {
     midstring = " zawiera ";
     return true;
     } else {

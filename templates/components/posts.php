@@ -7,8 +7,32 @@
             'post_type' => 'anbieter',
             'post_status' => 'publish',
             'numberposts' => -1,
-            "s" =>$_GET['s']
+            "s" =>$_GET['s'],
             // 'order' => 'ASC'
+        ]);
+    }
+
+    elseif (get_queried_object()->slug) {
+        $posts = get_posts([
+        'post_type' => 'anbieter',
+        'post_status' => 'publish',
+        'numberposts' => -1,
+        'tax_query' => array(
+            array(
+            'taxonomy' => 'anbieter_type',
+            'field' => 'slug',
+            'terms' => get_queried_object()->slug,
+            )
+        )
+        // 'order' => 'ASC'
+        ]);
+    }
+    else {
+        $posts = get_posts([
+        'post_type' => 'anbieter',
+        'post_status' => 'publish',
+        'numberposts' => -1,
+        // 'order' => 'ASC'
         ]);
     }
 
@@ -35,7 +59,7 @@
         the_post();
         $terms = get_the_terms( $item->ID, 'anbieter_type' );
     ?>
-    <li class="an-posts__item">
+    <li class="an-posts__item <?php if(get_search_query() == $item->post_title) {echo 'an-posts__item--mach';} ;?>">
         <!-- image -->
         <a href="<?= get_permalink($item->id) ?>">
             <figure class="an-posts__image-wrapper">
@@ -59,9 +83,9 @@
         </p> */?>
         <?php
         $rateOveral = get_rates($item->id);
-        if($rateOveral) {
+        //if($rateOveral) {
             include RP_PATH.'templates/components/votes-template/summary.php'; 
-        }
+        //}
         ?>
         <!-- button -->
         <a href="<?= get_permalink($item->id) ?>" class="an-posts__link">
@@ -86,3 +110,5 @@
 </ul>
 
 <?php endif ?>
+
+<div class="hidden" hidden id="hidden-content"></div>

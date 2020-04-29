@@ -33,6 +33,7 @@ function get_rates($id) {
             'preisLeistungsVerhaeltnis'=> round($preisLeistungsVerhaeltnis / $ratesCount,1),
             'sicherheitZuverlae'=> round($sicherheitZuverlae / $ratesCount,1),
             'bankWeiterempfehlen'=> round($bankWeiterempfehlen / $ratesCount,1),
+            'count' => $ratesCount,
         ];
     }
     return $rateOveral;

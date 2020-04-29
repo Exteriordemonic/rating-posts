@@ -17,7 +17,7 @@
             'kundenservice'=>$_POST['kundenservice'],
             'erreichbarkeit'=>$_POST['erreichbarkeit'],
             'preisLeistungsVerhaeltnis'=>$_POST['preis-leistungs-verhaeltnis'],
-            'sicherheitZuverlae'=>$_POST['sicherheit-zuverlae'],
+            'sicherheitZuverlae'=>$_POST['sicherheit-zuverlaessigkeit'],
             'bankWeiterempfehlen'=>$_POST['bank-weiterempfehlen'],
             'message' => $_POST['message'],
             'mail' => $_POST['mail'],

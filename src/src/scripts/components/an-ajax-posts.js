@@ -19,6 +19,7 @@ const anAjaxPosts = {
 
         if (this.elem) {
             this.addEvents();
+            this.loadPostsHidden();
         }
 
     },
@@ -58,6 +59,17 @@ const anAjaxPosts = {
 
         $(POSTS).load($url + ' ' + POSTS + '>*', function () {
             $posts.classList.remove($class);
+        });
+    },
+
+    loadPostsHidden() {
+        var $posts = this.posts;
+
+        this.elem.forEach(element => {
+            const $url = element.getAttribute('href');
+            $('#hidden-content').load($url + ' ' + POSTS + '>*', function () {
+                $posts.classList.remove($class);
+            });
         });
     },
 };

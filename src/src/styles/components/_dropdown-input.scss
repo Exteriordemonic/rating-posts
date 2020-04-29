@@ -19,6 +19,7 @@
         opacity: 0;
         transition: $transition;
         max-height: gutter(50);
+        overflow: auto;
         box-shadow: inset 0px 0px 1px 0 $label-color;
         transform-origin: top;
 
