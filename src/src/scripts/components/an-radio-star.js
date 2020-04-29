@@ -26,6 +26,6 @@ const radioStar = {
             });
         });
     },
-}
+};
 
 export default radioStar;

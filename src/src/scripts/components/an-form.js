@@ -17,7 +17,7 @@ const anForm = {
 
         if (this.form) {
             this.addEvents();
-        }
+        };
     },
 
     addEvents() {
@@ -28,7 +28,7 @@ const anForm = {
             this.getLabels();
             console.log('!! SEND FORM !!');
             this.form.submit();
-        })
+        });
     },
 
     getLabels() {
@@ -48,8 +48,8 @@ const anForm = {
 
             console.log('content', content);
             this.input.value = content;
-        }
+        };
     },
-}
+};
 
 export default anForm;

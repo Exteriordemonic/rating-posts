@@ -16,7 +16,7 @@ const anDropdownInput = {
         this.items = document.querySelectorAll(`[${ITEM}]`);
         if (this.inputs) {
             this.addEvents();
-        }
+        };
     },
 
     addEvents() {
@@ -51,8 +51,8 @@ const anDropdownInput = {
                     // Wrapper control
                     const wrapper = $this.parentNode.parentNode;
                     wrapper.classList.add('-is-active');
-                }, false)
-            })
+                }, false);
+            });
 
             input.addEventListener('focusout', e => {
                 const $this = e.currentTarget;
@@ -60,7 +60,7 @@ const anDropdownInput = {
                 // Wrapper control
                 const wrapper = $this.parentNode.parentNode;
                 wrapper.classList.remove('-is-active');
-            })
+            });
         });
 
         this.items.forEach(item => {
@@ -74,13 +74,13 @@ const anDropdownInput = {
                 const $txt = $this.innerText;
                 parent.insertBefore(this.createLabel($txt), wrapper);
                 $this.remove();
-            })
-        })
+            });
+        });
     },
 
     initRemoveFnc($this) {
         $this.addEventListener('click', e => {
-            console.log('label click')
+            console.log('label click');
             e.preventDefault();
             const $this = e.currentTarget;
 
@@ -91,7 +91,7 @@ const anDropdownInput = {
 
             wrapper.append(this.createItem($txt));
             $this.remove();
-        })
+        });
     },
 
     initCreateFnc($this) {
@@ -105,7 +105,7 @@ const anDropdownInput = {
             const $txt = $this.innerText;
             parent.insertBefore(this.createLabel($txt), wrapper);
             $this.remove();
-        })
+        });
     },
 
     createLabel($txt) {
@@ -138,6 +138,6 @@ const anDropdownInput = {
         this.initCreateFnc(elem);
         return elem;
     },
-}
+};
 
 export default anDropdownInput;

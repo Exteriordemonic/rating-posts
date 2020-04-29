@@ -1,9 +1,9 @@
 const CONFIG = {
     TRIGGER: 'data-rate-list-more',
-}
+};
 
 const {
-    TRIGGER
+    TRIGGER,
 } = CONFIG;
 
 const rateList = {
@@ -23,12 +23,12 @@ const rateList = {
                 wrapper.classList.toggle('-is-active');
                 subButtons.forEach(element => {
                     element.classList.toggle('-is-active');
-                })
+                });
 
                 console.log('log log');
-            })
+            });
         });
-    }
-}
+    },
+};
 
 export default rateList;
