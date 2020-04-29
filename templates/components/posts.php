@@ -59,7 +59,8 @@
         the_post();
         $terms = get_the_terms( $item->ID, 'anbieter_type' );
     ?>
-    <li class="an-posts__item <?php if(get_search_query() == $item->post_title) {echo 'an-posts__item--mach';} ;?>">
+    <li
+        class="an-posts__item <?php if(strtolower(get_search_query()) == strtolower($item->post_title)) {echo 'an-posts__item--mach';} ;?>">
         <!-- image -->
         <a href="<?= get_permalink($item->id) ?>">
             <figure class="an-posts__image-wrapper">

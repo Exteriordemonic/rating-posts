@@ -27,6 +27,7 @@
         @extend %padding-all-xxl;
 
         background-color: $light;
+        order: 2;
 
         &--mach {
             order: 1;
@@ -132,5 +133,9 @@
 
     &__empty {
         @extend %padding;
+    }
+
+    .image-overlay {
+        z-index: 0 !important;
     }
 }
