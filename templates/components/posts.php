@@ -1,12 +1,13 @@
 <?php 
     global $posts;
     
-    $postPerPage = 5; 
+    $postPerPage = 45; 
 
     $postArray = [
         'post_type' => 'anbieter',
         'post_status' => 'publish',
         'numberposts' => $postPerPage,
+        'posts_per_page' => $postPerPage,
         'paged' => (get_query_var('paged') ? get_query_var('paged') : 1),
         'tax_query' => array(
             array(
@@ -36,6 +37,7 @@
            'post_type' => 'anbieter',
             'post_status' => 'publish',
             'numberposts' => $postPerPage,
+            'posts_per_page' => $postPerPage,
             'paged' => (get_query_var('paged') ? get_query_var('paged') : 1),
             // 'order' => 'ASC'
         ];
