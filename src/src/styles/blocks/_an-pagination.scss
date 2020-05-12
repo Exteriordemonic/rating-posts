@@ -1,0 +1,57 @@
+.an-pagination {
+    margin-top: -$xxl;
+    padding-bottom: $xxl;
+    display: flex;
+    justify-content: center;
+
+    .page-numbers {
+        @extend %label;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $dark;
+        border: 0;
+        border-radius: $xs !important;
+        width: $xl;
+        height: $xl;
+        margin: 0 $xs;
+        cursor: pointer;
+        text-align: center;
+        color: $light !important;
+        text-decoration: none !important;
+
+        &.current {
+            background-color: $special;
+        }
+
+        &.dots {
+            display: none;
+        }
+
+        &.prev {
+            font-size: 0 !important;
+            position: relative;
+
+            &::after {
+                font-weight: 900;
+                font-size: 24px;
+                content: "\1F810";
+            }
+        }
+
+        &.next {
+            font-size: 0 !important;
+            position: relative;
+
+            &::after {
+                font-weight: 900;
+                font-size: 24px;
+                content: "\1F812";
+            }
+        }
+
+        &:hover {
+            background-color: $light-dark;
+        }
+    }
+}

@@ -1,6 +1,22 @@
 <?php 
     global $posts;
     
+    $postPerPage = 5; 
+
+    $postArray = [
+        'post_type' => 'anbieter',
+        'post_status' => 'publish',
+        'numberposts' => $postPerPage,
+        'paged' => (get_query_var('paged') ? get_query_var('paged') : 1),
+        'tax_query' => array(
+            array(
+            'taxonomy' => 'anbieter_type',
+            'field' => 'slug',
+            'terms' => get_queried_object()->slug,
+            )
+        )
+        // 'order' => 'ASC'
+    ];
     
     if($_GET['s']) {
         $posts = get_posts([
@@ -13,27 +29,17 @@
     }
 
     elseif (get_queried_object()->slug) {
-        $posts = get_posts([
-        'post_type' => 'anbieter',
-        'post_status' => 'publish',
-        'numberposts' => -1,
-        'tax_query' => array(
-            array(
-            'taxonomy' => 'anbieter_type',
-            'field' => 'slug',
-            'terms' => get_queried_object()->slug,
-            )
-        )
-        // 'order' => 'ASC'
-        ]);
+        $posts = get_posts($postArray);
     }
     else {
-        $posts = get_posts([
-        'post_type' => 'anbieter',
-        'post_status' => 'publish',
-        'numberposts' => -1,
-        // 'order' => 'ASC'
-        ]);
+        $postArray = [
+           'post_type' => 'anbieter',
+            'post_status' => 'publish',
+            'numberposts' => $postPerPage,
+            'paged' => (get_query_var('paged') ? get_query_var('paged') : 1),
+            // 'order' => 'ASC'
+        ];
+        $posts = get_posts($postArray);
     }
 
     $post_ids = array();
@@ -100,6 +106,25 @@
     </li>
     <?php endforeach; ?>
 </ul>
+
+<?php $loop = new WP_Query($postArray); ?>
+
+<div class="an-pagination">
+    <?php
+    
+    $big = 999999999; // need an unlikely integer
+     echo paginate_links( array(
+        'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+        'format' => '?paged=%#%',
+        'current' => max( 1, get_query_var('paged') ),
+        'total' => $loop->max_num_pages,
+        'mid_size' => 10
+    ) );
+    ?>
+
+</div>
+
+
 
 <?php else : ?>
 <ul class="an-posts" id="an-posts">
