@@ -17,4 +17,6 @@ $(document).ready(function () {
     anDropdownInput.init();
     anForm.init();
     anRateList.init();
+
+    console.log("webpack starterkit !!!");
 });

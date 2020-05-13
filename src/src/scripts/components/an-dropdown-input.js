@@ -16,6 +16,8 @@ const anDropdownInput = {
         this.items = document.querySelectorAll(`[${ITEM}]`);
         if (this.inputs) {
             this.addEvents();
+
+            console.log('TEST ! ! ! !');
         };
     },
 
@@ -51,6 +53,8 @@ const anDropdownInput = {
                     // Wrapper control
                     const wrapper = $this.parentNode.parentNode;
                     wrapper.classList.add('-is-active');
+
+                    console.log('test');
                 }, false);
             });
 

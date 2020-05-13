@@ -1,4 +1,11 @@
 <?php get_header(); ?>
+
+<?php 
+
+update_field('visit', get_field('visit') + 1);
+
+?>
+
 <svg class="an-single__hide">
     <defs>
         <linearGradient id="MyGradient">

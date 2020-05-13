@@ -8,6 +8,9 @@
             <?php if(!$rs_single) :?>
 
             <?php if($rateOveral): ?>
+            <?php 
+                update_field('bewertung', $rateOveral);
+            ?>
             <?= $rateOveral['deineBewertung'] ?> <?= 'von 5';?> <span
                 class="an-summary__rate--count">(<?= $rateOveral['count'] ?>)</span>
             <?php else:?>

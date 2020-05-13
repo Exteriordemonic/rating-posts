@@ -10,6 +10,8 @@ $anbieter
 $anbieter
     ->addTab('Haupteinstellungen', ['placement' => 'left'])
         ->addUrl('ZumAngebot')
+        ->addNumber('visit')
+        ->addNumber('bewertung')
     ->addTab('Erfahrungen', ['placement' => 'left'])
         ->addTextarea('dsc', ['label'=>'Beschreibung', 'new_lines'=>'br'])
     ->addTab('Kundigen', ['placement' => 'side'])

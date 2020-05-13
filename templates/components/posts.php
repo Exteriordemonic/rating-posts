@@ -2,13 +2,31 @@
     global $posts;
     
     $postPerPage = 45; 
+    
+    $orderby = 'title';
+    $order = $_GET['orderby'];
 
+    if($order=="beliebteste-anbieter") {
+        $metaValue = 'visit';
+        $orderby = 'meta_value';
+	    $order	= 'ASC';
+    }
+
+    if($order=="beste-bewertung") {
+        $metaValue = 'bewertung';
+        $orderby = 'meta_value';
+	    $order	= 'DSC';
+    }
+    
     $postArray = [
         'post_type' => 'anbieter',
         'post_status' => 'publish',
         'numberposts' => $postPerPage,
         'posts_per_page' => $postPerPage,
         'paged' => (get_query_var('paged') ? get_query_var('paged') : 1),
+        'meta_key' => $metaValue,
+        'orderby' => $orderby,
+        'order' => $order,
         'tax_query' => array(
             array(
             'taxonomy' => 'anbieter_type',
@@ -39,6 +57,10 @@
             'numberposts' => $postPerPage,
             'posts_per_page' => $postPerPage,
             'paged' => (get_query_var('paged') ? get_query_var('paged') : 1),
+            'meta_key' => $metaValue,
+            'orderby' => $orderby,
+            'order' => $order,
+            
             // 'order' => 'ASC'
         ];
         $posts = get_posts($postArray);

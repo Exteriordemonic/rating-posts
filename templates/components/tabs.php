@@ -34,6 +34,9 @@ function isTabActive($name, $cur) {
     </li>
     <?php endforeach; ?>
     <li class="an-tabs__item an-tabs__item--search">
+        <?php include RP_PATH.'templates/components/search-form-filter.php'; ?>
+    </li>
+    <li class="an-tabs__item an-tabs__item--search">
         <?php include RP_PATH.'templates/components/search-form.php'; ?>
     </li>
 </ul>
