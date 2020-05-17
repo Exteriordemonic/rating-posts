@@ -3,24 +3,15 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: $l;
-    grid-column: span 2;
     margin: 0;
-
-    @include mediaTo(sm) {
-        grid-column: span 1;
-    }
 
     &__item {
         @extend %radius;
 
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 330px 1fr;
         gap: $l;
         background-color: $light;
-
-        @include mediaTo(lg) {
-            grid-template-columns: 2fr 3fr;
-        }
 
         @include mediaTo(md) {
             grid-template-columns: 1fr;

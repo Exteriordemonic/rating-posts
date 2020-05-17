@@ -4,11 +4,27 @@
 
     background-color: $light;
 
+    @include mediaTo(md) {
+        display: block;
+    }
+
     &--empty {
         grid-column: span 3;
 
         @include mediaTo(sm) {
             grid-column: span 1;
+        }
+    }
+
+    &--holder-width {
+        width: calc(100% / 3);
+        height: auto;
+        flex-shrink: 0;
+        margin-right: $l;
+        display: none;
+
+        &.-fix {
+            display: block;
         }
     }
 
@@ -22,8 +38,18 @@
         border: 1px solid $gray;
         margin-bottom: $l;
 
+        @include mediaTo(md) {
+            width: 30%;
+            float: left;
+            padding-top: 20.37%;
+            margin-right: $xl;
+        }
+
         @include mediaTo(xs) {
+            width: 100%;
+            float: none;
             padding-top: 44.37%;
+            margin-right: 0;
         }
 
         img {
@@ -77,6 +103,7 @@
         text-align: left;
         margin-top: $s;
         margin-bottom: $xl;
+        display: block !important;
     }
 
     &__link {

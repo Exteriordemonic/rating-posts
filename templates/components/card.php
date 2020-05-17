@@ -5,9 +5,9 @@
     </figure>
     <!-- title / term -->
     <div class="an-card__title-wrapper">
-        <h2 class="an-card__title">
+        <h1 class="an-card__title">
             <?=  $post->post_title ;?>
-        </h2>
+        </h1>
         <?php foreach ($terms as $term) : ?>
         <a href="<?= get_term_link($term->term_id)?>" class="an-card__label">
             <?= $term->name ?>

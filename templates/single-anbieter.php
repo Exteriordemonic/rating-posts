@@ -61,12 +61,15 @@ update_field('visit', get_field('visit') + 1);
             <div class="an-single__row an-single__row--erfahrungen">
                 <!-- card -->
                 <?php include RP_PATH.'templates/components/card.php'; ?>
-                <!-- rating sumary -->
-                <?php include RP_PATH.'templates/components/rating-summary.php'; ?>
-                <!-- rate now -->
-                <?php include RP_PATH.'templates/components/rate-now-cta.php'; ?>
-                <!-- rate list -->
-                <?php include RP_PATH.'templates/components/rate-list.php'; ?>
+                <div class="an-card--holder-width"></div>
+                <div class="an-single__erfahrungen">
+                    <!-- rating sumary -->
+                    <?php include RP_PATH.'templates/components/rating-summary.php'; ?>
+                    <!-- rate now -->
+                    <?php include RP_PATH.'templates/components/rate-now-cta.php'; ?>
+                    <!-- rate list -->
+                    <?php include RP_PATH.'templates/components/rate-list.php'; ?>
+                </div>
             </div>
             <div class="an-single__row an-single__row--kundigen">
                 <!-- card -->

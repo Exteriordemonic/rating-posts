@@ -5,15 +5,10 @@
     display: flex;
     align-self: center;
     justify-content: center;
-    grid-column: span 2;
     margin-bottom: 0 !important;
 
-    @include mediaTo(md) {
+    @include mediaTo(xl) {
         flex-wrap: wrap;
-    }
-
-    @include mediaTo(sm) {
-        grid-column: span 1;
     }
 
     &__title {

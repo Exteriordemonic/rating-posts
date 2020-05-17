@@ -18,5 +18,21 @@ $(document).ready(function () {
     anForm.init();
     anRateList.init();
 
+
+    var stickyTop = $('.an-card').offset().top;
+
+    if ($(".an-single__row--erfahrungen").length) {
+        $(window).scroll(function () {
+            var windowTop = $(window).scrollTop();
+            if (stickyTop < windowTop && $(".an-single__row--erfahrungen").height() + $(".an-single__row--erfahrungen").offset().top - $(".an-card").height() > windowTop) {
+                $('.an-card').addClass('-fix');
+                $('.an-card--holder-width').addClass('-fix');
+            } else {
+                $('.an-card').removeClass('-fix');
+                $('.an-card--holder-width').removeClass('-fix');
+            }
+        });
+    }
+
     console.log("webpack starterkit !!!");
 });

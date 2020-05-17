@@ -12,7 +12,7 @@
         grid-template-columns: 1fr 2fr;
         gap: $l;
 
-        @include mediaTo(lg) {
+        @include mediaTo(md) {
             grid-template-columns: 2fr 3fr;
         }
 
@@ -21,12 +21,68 @@
         }
 
         &--erfahrungen {
-            display: grid;
+            display: flex;
+            align-items: flex-start;
+
+            @include mediaTo(md) {
+                grid-template-columns: 1fr 2fr;
+            }
+
+            @include mediaTo(md) {
+                flex-wrap: wrap;
+            }
+
+            .an-card {
+                width: calc(100% / 3);
+                height: auto;
+                flex-shrink: 0;
+                margin-right: $l;
+                top: 0;
+                background-color: $light;
+                z-index: 10;
+
+                @include mediaTo(md) {
+                    width: 100%;
+                    margin-bottom: $l;
+                    margin-right: 0;
+                }
+
+                &.-fix {
+                    top: $xl * 2;
+                    position: fixed;
+                    width: calc(100% / 3 - #{$l});
+
+                    @include mediaTo(md) {
+                        width: calc(100% - #{$xxl * 2});
+                        top: unset;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        padding: $m;
+                        max-width: gutter(180);
+                        margin: auto;
+
+                        * {
+                            display: none !important;
+                        }
+
+                        .an-card__link {
+                            display: block !important;
+                        }
+                    }
+                }
+            }
         }
 
         &--kundigen {
             display: none;
         }
+    }
+
+    &__erfahrungen {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: $l;
     }
 
     &__wrapper {
